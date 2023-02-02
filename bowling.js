@@ -122,18 +122,6 @@ class Bowling {
                 this.total_score += this.framescore[this.current_frame - 1][0];
 
                 ticket.push(i);
-            } else if (this.current_frame === 10 && this.potential_score[i].frame === 10 && this.potential_score[i].amount === 1) {
-                this.framescore[this.current_frame - 1][1] += this.current_frame_score[2];
-                this.total_score += this.current_frame_score[2];
-
-                ticket.push(i);
-            } else if (this.current_frame === 10 && this.roll === 3) {
-                this.framescore[this.current_frame - 1][0] += this.current_frame_score[1];
-                this.framescore[this.current_frame - 1][0] += this.current_frame_score[2];
-                this.total_score += this.current_frame_score[1];
-                this.total_score += this.current_frame_score[2];
-
-                ticket.push(i);
             };
         }
         for (let i = 0; i < ticket.length; i++) {
